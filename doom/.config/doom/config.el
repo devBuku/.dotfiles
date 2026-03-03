@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "CodeNewRoman Nerd Font Mono" :size 12 )
-      doom-variable-pitch-font (font-spec :family "CodeNewRoman Nerd Font" :size 13))
+(setq doom-font (font-spec :family "CodeNewRoman Nerd Font Mono" :size 12 :weight `bold)
+      doom-variable-pitch-font (font-spec :family "CodeNewRoman Nerd Font" :size 13 :weight `bold))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -84,3 +84,5 @@
           "--header-insertion=never"
           "--header-insertion-decorators=0"))
   (set-lsp-priority! 'clangd 2))
+
+(add-to-list 'exec-path (expand-file-name "~/go/bin"))
