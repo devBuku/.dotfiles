@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "LiterationMono Nerd Font Mono" :size 12)
-      doom-variable-pitch-font (font-spec :family "LiterationMono Nerd Font" :size 13))
+(setq doom-font (font-spec :family "DejavuSansM Nerd Font Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "DejavuSansM Nerd Font" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one-light)
+(setq doom-theme 'modus-operandi)
 (setq doom-themes-enable-italic nil)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -76,6 +76,8 @@
 ;; they are implemented.
 
 (add-to-list 'exec-path (expand-file-name "~/go/bin"))
+
+(setq-default cursor-type 'box)
 
 (after! evil
   (setq evil-normal-state-cursor 'box
