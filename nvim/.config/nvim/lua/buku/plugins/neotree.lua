@@ -19,6 +19,11 @@ return {
 	---@type neotree.Config
 	opts = {
 		filesystem = {
+			follow_current_file = {
+				enabled = true,
+				leave_dirs_open = true,
+			},
+			use_libuv_file_watcher = true,
 			window = {
 				mappings = {
 					["\\"] = "close_window",
