@@ -638,6 +638,9 @@ require("lazy").setup({
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				ts_ls = {},
+				cssls = {},
+				tailwindcss = {},
+				html = {},
 				prettierd = {},
 
 				stylua = {}, -- Used to format Lua code
@@ -766,12 +769,12 @@ require("lazy").setup({
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:
 					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					--   'rafamadriz/friendly-snippets',
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
 				},
 				opts = {},
 			},
@@ -949,3 +952,10 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+
+vim.opt.smartindent = true
