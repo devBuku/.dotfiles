@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Monospace" :size 14)
-      doom-variable-pitch-font (font-spec :family "Monospace" :size 15))
+(setq doom-font (font-spec :family "CodeNewRoman Nerd Font Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "CodeNewRoman Nerd Font" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'modus-operandi)
+(setq doom-theme 'leuven)
 (setq doom-themes-enable-italic nil)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -41,7 +41,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-                                        ; (setq org-directory "~/Desktop/Notes")
+(setq org-directory "~/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -75,4 +75,25 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-                                        ; (add-to-list 'exec-path (expand-file-name "~/go/bin"))
+(map! "M-o" #'other-window)
+
+(after! lsp-tailwindcss
+  (setq lsp-tailwindcss-server-path
+        (executable-find "tailwindcss-language-server")))
+
+(use-package! lsp-tailwindcss
+  :after lsp-mode
+  :init
+  (setq lsp-tailwindcss-add-on-mode t))
+
+(with-eval-after-load 'lsp-clangd
+  (setq lsp-clients-clangd-args
+        '("-j=3"
+          "--background-index"
+          "--clang-tidy"
+          "--completion-style=detailed"
+          "--header-insertion=never"
+          "--header-insertion-decorators=0"))
+  (set-lsp-priority! 'clangd 2))
+
+(setq vterm-max-scrollback 50000)

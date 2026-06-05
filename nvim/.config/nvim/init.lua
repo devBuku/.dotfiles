@@ -961,3 +961,4 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 
 vim.o.guicursor = ""
+vim.o.conceallevel = 2
