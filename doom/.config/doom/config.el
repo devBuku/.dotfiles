@@ -147,7 +147,7 @@
 ;;         highlight-indent-guides-responsive 'top))
 
 (map! :map global-map
-      "M-h" #'windmove-left
-      "M-j" #'windmove-down
-      "M-k" #'windmove-up
-      "M-l" #'windmove-right)
+      "C-h" #'windmove-left
+      "C-j" #'windmove-down
+      "C-k" #'windmove-up
+      "C-l" #'windmove-right)
