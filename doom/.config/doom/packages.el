@@ -54,3 +54,4 @@
 ;; (unpin! t)
 
 (package! prisma-mode :recipe (:host github :repo "pimeys/emacs-prisma-mode" :branch "main"))
+;; (package! highlight-indent-guides :recipe (:host github :repo "bumblepup/highlight-indent-guides"))

@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-;;(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 12)
-;;      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 13))
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -32,12 +32,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme `doom-dark+)
+(setq doom-theme 'leuven)
 (setq doom-themes-enable-italic nil)
+
+(after! emacs
+  (set-face-background 'cursor "black"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type `relative)
+(setq display-line-numbers-type 'relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -102,3 +105,43 @@
 
 ;; (add-to-list 'default-frame-alist '(alpha . 90))
 ;; (setq fancy-splash-image "~/Pictures/bride.jpg")
+
+(defun my/split-window-right-and-focus ()
+  (interactive)
+  (split-window-right)
+  (other-window 1))
+
+(defun my/split-window-below-and-focus ()
+  (interactive)
+  (split-window-below)
+  (other-window 1))
+
+(map! "C-x 3" #'my/split-window-right-and-focus
+      "C-x 2" #'my/split-window-below-and-focus)
+
+(setq projectile-project-search-path `("~/Projects/"))
+
+(setq-default cursor-type 'box)
+
+(after! evil
+  (setq evil-default-cursor 'box
+        evil-normal-state-cursor 'box
+        evil-insert-state-cursor 'box
+        evil-visual-state-cursor 'box
+        evil-motion-state-cursor 'box
+        evil-replace-state-cursor 'box
+        evil-operator-state-cursor 'box))
+
+(blink-cursor-mode 1)
+
+(setq leuven-scale-outline-headlines nil)
+(setq leuven-scale-org-agenda-structure nil)
+(setq leuven-scale-org-document-title nil)
+(setq leuven-scale-volatile-highlight nil)
+
+
+;; (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
+
+;; (after! highlight-indent-guides
+;;   (setq highlight-indent-guides-method 'character
+;;         highlight-indent-guides-responsive 'top))
