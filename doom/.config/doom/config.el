@@ -145,3 +145,9 @@
 ;; (after! highlight-indent-guides
 ;;   (setq highlight-indent-guides-method 'character
 ;;         highlight-indent-guides-responsive 'top))
+
+(map! :map global-map
+      "M-h" #'windmove-left
+      "M-j" #'windmove-down
+      "M-k" #'windmove-up
+      "M-l" #'windmove-right)
