@@ -148,3 +148,9 @@
       "C-j" #'windmove-down
       "C-k" #'windmove-up
       "C-l" #'windmove-right)
+
+(after! emacs
+  (fringe-mode '(8 . 0)))
+
+(after! org
+  (setq org-deadline-warning-days 60))
