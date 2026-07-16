@@ -384,7 +384,7 @@ do
 
 	-- Load the colorscheme here.
 	-- Like many other themes, this one has different styles, and you could load
-	vim.cmd.colorscheme("vim")
+	-- vim.cmd.colorscheme("vim")
 
 	-- Highlight todo, notes, etc in comments
 	vim.pack.add({ gh("folke/todo-comments.nvim") })
@@ -696,7 +696,7 @@ do
 	--  See `:help lsp-config` for information about keys and how to configure
 	---@type table<string, vim.lsp.Config>
 	local servers = {
-		-- clangd = {},
+		clangd = {},
 		-- gopls = {},
 		-- pyright = {},
 		-- rust_analyzer = {},
@@ -705,7 +705,9 @@ do
 		--    https://github.com/pmizio/typescript-tools.nvim
 		--
 		-- But for many setups, the LSP (`ts_ls`) will work just fine
-		-- ts_ls = {},
+		ts_ls = {},
+		prettierd = {},
+		prismals = {},
 
 		stylua = {}, -- Used to format Lua code
 
@@ -810,7 +812,10 @@ do
 			-- python = { "isort", "black" },
 			--
 			-- You can use 'stop_after_first' to run the first available formatter from the list
-			-- javascript = { "prettierd", "prettier", stop_after_first = true },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
+			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+			typescript = { "prettierd", "prettier", stop_after_first = true },
+			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		},
 	})
 
@@ -996,7 +1001,7 @@ do
 	-- NOTE: You can add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-	require 'custom.plugins'
+	require("custom.plugins")
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
