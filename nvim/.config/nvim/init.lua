@@ -698,7 +698,7 @@ do
 	local servers = {
 		clangd = {},
 		-- gopls = {},
-		-- pyright = {},
+		pyright = {},
 		-- rust_analyzer = {},
 		--
 		-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -708,7 +708,7 @@ do
 		ts_ls = {},
 		prettierd = {},
 		prismals = {},
-
+		black = {},
 		stylua = {}, -- Used to format Lua code
 
 		-- Special Lua Config, as recommended by neovim help docs
@@ -809,7 +809,7 @@ do
 		formatters_by_ft = {
 			-- rust = { 'rustfmt' },
 			-- Conform can also run multiple formatters sequentially
-			-- python = { "isort", "black" },
+			python = { "isort", "black" },
 			--
 			-- You can use 'stop_after_first' to run the first available formatter from the list
 			javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -1006,3 +1006,5 @@ end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.opt.guicursor = ""
