@@ -1,75 +1,29 @@
 vim.pack.add({
-	"https://github.com/maxmx03/solarized.nvim",
+	"https://github.com/ellisonleao/gruvbox.nvim",
 })
 
 -- Default options:
-vim.o.background = "dark"
-
--- default config
-require("solarized").setup({
-	transparent = {
-		enabled = true,
-		pmenu = true,
-		normal = true,
-		normalfloat = true,
-		neotree = true,
-		nvimtree = true,
-		whichkey = true,
-		telescope = true,
-		lazy = true,
+require("gruvbox").setup({
+	terminal_colors = true, -- add neovim terminal colors
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = false,
+		emphasis = false,
+		comments = false,
+		operators = false,
+		folds = false,
 	},
-	on_highlights = nil,
-	on_colors = nil,
-	palette = "solarized", -- solarized (default) | selenized
-	variant = "winter", -- "spring" | "summer" | "autumn" | "winter" (default)
-	error_lens = {
-		text = false,
-		symbol = false,
-	},
-	styles = {
-		enabled = true,
-		types = { italic = false },
-		functions = { italic = false },
-		parameters = { italic = false },
-		comments = { italic = false },
-		strings = { italic = false },
-		keywords = { italic = false },
-		variables = { italic = false },
-		constants = { italic = false },
-	},
-	plugins = {
-		treesitter = true,
-		lspconfig = true,
-		navic = true,
-		cmp = true,
-		indentblankline = true,
-		indentmini = true,
-		neotree = true,
-		nvimtree = true,
-		whichkey = true,
-		dashboard = true,
-		gitsigns = true,
-		telescope = true,
-		noice = true,
-		hop = true,
-		ministatusline = true,
-		minitabline = true,
-		ministarter = true,
-		minicursorword = true,
-		notify = true,
-		rainbowdelimiters = true,
-		bufferline = true,
-		lazy = true,
-		rendermarkdown = true,
-		ale = true,
-		coc = true,
-		leap = true,
-		alpha = true,
-		yanky = true,
-		gitgutter = true,
-		mason = true,
-		flash = true,
-	},
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "", -- can be "hard", "soft" or empty string
+	palette_overrides = {},
+	overrides = {},
+	dim_inactive = false,
+	transparent_mode = true,
 })
-
-vim.cmd.colorscheme("solarized")
+vim.cmd.colorscheme("vim")

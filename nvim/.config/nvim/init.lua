@@ -697,7 +697,7 @@ do
 	---@type table<string, vim.lsp.Config>
 	local servers = {
 		clangd = {},
-		-- gopls = {},
+		gopls = {},
 		pyright = {},
 		-- rust_analyzer = {},
 		--
@@ -710,6 +710,7 @@ do
 		prismals = {},
 		black = {},
 		stylua = {}, -- Used to format Lua code
+		gofumpt = {},
 
 		-- Special Lua Config, as recommended by neovim help docs
 		lua_ls = {
@@ -810,6 +811,7 @@ do
 			-- rust = { 'rustfmt' },
 			-- Conform can also run multiple formatters sequentially
 			python = { "isort", "black" },
+			go = { "gofumpt" },
 			--
 			-- You can use 'stop_after_first' to run the first available formatter from the list
 			javascript = { "prettierd", "prettier", stop_after_first = true },
