@@ -1,5 +1,3 @@
-# DevBuku's Dotfiles
-
 Personal Arch Linux + i3wm dotfiles — clean, keyboard-driven, and beginner-friendly.
 
 This repository is managed with [GNU Stow](https://www.gnu.org/software/stow/) so each application's config lives in its own directory and can be deployed independently.
