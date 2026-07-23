@@ -699,6 +699,7 @@ do
 		emmet_ls = {},
 		tailwindcss = {},
 		html = {},
+		jsonls = {},
 
 		-- Special Lua Config, as recommended by neovim help docs
 		lua_ls = {
