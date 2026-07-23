@@ -67,7 +67,7 @@ enables tap-to-click.
 - **thunar** → usb/android/iphone/shares via gvfs + udisks2
 - **i3** → `xorg/.xinitrc`: xcompmgr, xwallpaper, polkit, caps→esc, exec i3
 
-## post
+## post install
 
 ```bash
 xdg-user-dirs-update
