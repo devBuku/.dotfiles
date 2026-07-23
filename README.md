@@ -34,16 +34,16 @@ stow i3 kitty nvim tmux flameshot xorg scripts
 
 ## Required Packages
 
-```
-stow i3-wm kitty neovim tmux thunar thunar-volman tumbler
-gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-nfs
-udisks2 polkit polkit-gnome dmenu flameshot brightnessctl
-i3status xclip fzf ripgrep tree-sitter-cli python-virtualenv
-python-pip base-devel xdg-user-dirs xcompmgr xwallpaper
-network-manager-applet blueman
+```bash
+sudo pacman -S --needed stow i3-wm kitty neovim tmux thunar \
+  thunar-volman tumbler gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 \
+  gvfs-smb gvfs-nfs udisks2 polkit polkit-gnome dmenu flameshot \
+  brightnessctl i3status xclip fzf ripgrep tree-sitter-cli \
+  python-virtualenv python-pip base-devel xdg-user-dirs \
+  xcompmgr xwallpaper network-manager-applet blueman
 ```
 
-Node.js via [nvm](https://github.com/nvm-sh/nvm).
+> `--needed` skips already-installed packages. Node.js is installed via [nvm](https://github.com/nvm-sh/nvm), not pacman.
 
 ## Font
 
