@@ -69,6 +69,8 @@ stow xorg
 stow scripts
 ```
 
+> **Warning:** `stow bash` will overwrite your existing `~/.bashrc`. Review `bash/.bashrc` first — shell config is often machine-specific. Cherry-pick what you need rather than deploying blindly.
+
 > **Why Stow?** Unlike copying files manually, Stow creates a single source of truth. Edit files in `~/.dotfiles`, commit changes, and redeploy anywhere. No more scattered dotfiles.
 
 To see what Stow will do without applying:
