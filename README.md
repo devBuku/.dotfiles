@@ -1,27 +1,27 @@
-Arch Linux + i3wm dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
+personal arch + i3wm dotfiles · managed with [stow](https://www.gnu.org/software/stow/)
 
-## Screenshots
+---
 
-| Desktop | Terminal | Neovim |
+## screenshots
+
+| desktop | terminal | neovim |
 |---------|----------|--------|
-| ![Desktop](ss/desktop.png) | ![Terminal](ss/terminal.png) | ![Neovim](ss/neovim1.png) |
+| ![](ss/desktop.png) | ![](ss/terminal.png) | ![](ss/neovim1.png) |
 
-## Features
+## stack
 
-| Component     | Choice                              |
-|---------------|-------------------------------------|
-| WM            | i3wm                                |
-| Terminal      | Kitty                               |
-| Shell         | Bash                                |
-| Editor        | Neovim 0.12+ (kickstart.nvim)       |
-| Multiplexer   | tmux + tmux-sessionizer             |
-| File Manager  | Thunar                              |
-| Launcher      | dmenu                               |
-| Screenshots   | Flameshot                           |
-| Dotfile Mgmt  | GNU Stow                            |
-| Font          | GeistMono Nerd Font                 |
+| component | what |
+|-----------|------|
+| wm | i3wm |
+| term | kitty |
+| shell | bash |
+| editor | neovim 0.12+ |
+| mux | tmux |
+| files | thunar |
+| launch | dmenu |
+| font | geistmono nerd font |
 
-## Installation
+## usage
 
 ```bash
 git clone https://github.com/devbuku/.dotfiles.git ~/.dotfiles
@@ -30,9 +30,9 @@ cd ~/.dotfiles
 stow i3 kitty nvim tmux flameshot xorg scripts
 ```
 
-> **Warning:** `stow bash` will overwrite `~/.bashrc`. Review it first.
+> **!** `stow bash` overwrites `~/.bashrc` — review first.
 
-## Required Packages
+## packages
 
 ```bash
 sudo pacman -S --needed stow i3-wm kitty neovim tmux thunar \
@@ -43,53 +43,51 @@ sudo pacman -S --needed stow i3-wm kitty neovim tmux thunar \
   xcompmgr xwallpaper network-manager-applet blueman
 ```
 
-> `--needed` skips already-installed packages. Node.js is installed via [nvm](https://github.com/nvm-sh/nvm), not pacman.
+node.js via [nvm](https://github.com/nvm-sh/nvm).
 
-## Font
+## font
 
 ```bash
 sudo pacman -S otf-geist-mono-nerd
 ```
 
-Nerd Font required for icons in Neovim, tmux, and Thunar.
-
-## Laptop Users
+## laptop
 
 ```bash
 sudo cp touchpad-tap.conf /etc/X11/xorg.conf.d/
 ```
 
-Enables tap-to-click.
+enables tap-to-click.
 
-## Components
+## notes
 
-- **Bash** — aliases, PATH, nvm, tmux-sessionizer (Ctrl-f)
-- **tmux** — prefix Ctrl-b, sessionizer on `f`, Alt+number for windows, Alt+hjkl for panes
-- **Neovim** — kickstart.nvim, neo-tree, copilot, autopairs, git, gruvbox. Requires tree-sitter, Node.js (nvm), python-virtualenv
-- **Thunar** — USB, Android, iPhone, network shares via gvfs + udisks2. Enable: `sudo systemctl enable --now udisks2`
-- **i3** — starts via `xorg/.xinitrc`: xcompmgr, xwallpaper, polkit-gnome, Caps→Escape remap, exec i3
+- **bash** → aliases, nvm, tmux-sessionizer on `C-f`
+- **tmux** → prefix `C-b`, sessionizer `f`, pane nav `M-hjkl`
+- **nvim** → kickstart, neo-tree, copilot, autopairs, git, gruvbox
+- **thunar** → usb/android/iphone/shares via gvfs + udisks2
+- **i3** → `xorg/.xinitrc`: xcompmgr, xwallpaper, polkit, caps→esc, exec i3
 
-## Post-Install
+## post
 
 ```bash
 xdg-user-dirs-update
 sudo systemctl enable --now udisks2
 ```
 
-## Repository
+## layout
 
-| Directory       | Contents                               |
-|-----------------|----------------------------------------|
-| `i3/`           | i3 config                              |
-| `kitty/`        | Kitty config                           |
-| `nvim/`         | Neovim config                          |
-| `tmux/`         | tmux config                            |
-| `bash/`         | .bashrc                                |
-| `xorg/`         | .xinitrc                               |
-| `scripts/`      | tmux-sessionizer                       |
-| `flameshot/`    | Flameshot config                       |
-| `touchpad-tap.conf` | Xorg touchpad config (manual copy) |
+| dir | what |
+|-----|------|
+| `i3/` | i3 config |
+| `kitty/` | kitty config |
+| `nvim/` | neovim config |
+| `tmux/` | tmux config |
+| `bash/` | .bashrc |
+| `xorg/` | .xinitrc |
+| `scripts/` | tmux-sessionizer |
+| `flameshot/` | flameshot config |
+| `touchpad-tap.conf` | xorg touchpad (manual cp) |
 
-## Credits
+## credits
 
-[i3wm](https://i3wm.org/) · [Neovim](https://neovim.io/) · [GNU Stow](https://www.gnu.org/software/stow/) · [tmux](https://github.com/tmux/tmux) · [Kitty](https://sw.kovidgoyal.net/kitty/) · [Thunar](https://docs.xfce.org/xfce/thunar/start) · [Arch Linux](https://archlinux.org/)
+[i3wm](https://i3wm.org) · [neovim](https://neovim.io) · [stow](https://www.gnu.org/software/stow) · [tmux](https://github.com/tmux/tmux) · [kitty](https://sw.kovidgoyal.net/kitty) · [thunar](https://docs.xfce.org/xfce/thunar/start) · [arch](https://archlinux.org)
