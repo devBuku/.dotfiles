@@ -831,8 +831,8 @@ do
 	--    See the README about individual language/framework/plugin snippets:
 	--    https://github.com/rafamadriz/friendly-snippets
 	--
-	-- vim.pack.add { gh 'rafamadriz/friendly-snippets' }
-	-- require('luasnip.loaders.from_vscode').lazy_load()
+	vim.pack.add { gh 'rafamadriz/friendly-snippets' }
+	require('luasnip.loaders.from_vscode').lazy_load()
 
 	-- [[ Autocomplete Engine ]]
 	vim.pack.add({ { src = gh("saghen/blink.cmp"), version = vim.version.range("1.*") } })
@@ -878,7 +878,7 @@ do
 		},
 
 		sources = {
-			default = { "lsp", "path", "snippets" },
+			default = { "lsp", "path", "buffer", "snippets" },
 		},
 
 		snippets = { preset = "luasnip" },
@@ -997,5 +997,3 @@ end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
-vim.opt.guicursor = ""
