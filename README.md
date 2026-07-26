@@ -11,8 +11,8 @@ personal ubuntu + i3wm dotfiles · managed with [stow](https://www.gnu.org/softw
 | shell | bash |
 | editor | neovim 0.12+ (build from source) |
 | mux | tmux |
-| files | thunar |
-| launch | dmenu |
+| files | nautilus (gnome) |
+| launch | gnome-shell overview |
 | font | geistmono nerd font |
 
 ## usage
@@ -28,18 +28,26 @@ stow i3 kitty nvim tmux flameshot xorg scripts
 
 ## packages
 
+### arch (minimal i3)
+
 ```bash
-sudo apt install stow i3 kitty tmux thunar thunar-volman tumbler \
-  gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-nfs \
-  udisks2 policykit-1-gnome dmenu flameshot brightnessctl \
+sudo pacman -S --needed stow i3-wm kitty neovim tmux flameshot \
+  brightnessctl i3status xclip fzf ripgrep tree-sitter-cli \
+  python-virtualenv python-pip base-devel xdg-user-dirs \
+  xcompmgr xwallpaper network-manager-applet blueman
+```
+
+### ubuntu gnome
+
+```bash
+sudo apt install stow i3 kitty tmux flameshot brightnessctl \
   i3status xclip fzf ripgrep python3-venv python3-pip \
-  build-essential xdg-user-dirs xcompmgr network-manager-gnome \
-  blueman ripgrep
+  build-essential xdg-user-dirs xcompmgr
 ```
 
 node.js via [nvm](https://github.com/nvm-sh/nvm).
 
-> `policykit-1-gnome` provides `/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1`.  
+> `policykit-1-gnome` comes pre-installed with Ubuntu GNOME.  
 > `build-essential` is needed to compile neovim from source.
 
 ## neovim
