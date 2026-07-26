@@ -44,6 +44,3 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# export XDG_DATA_DIRS="$XDG_DATA_DIRS:~/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share"
-# export PATH="$PATH:~/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin"
-
