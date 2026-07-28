@@ -117,10 +117,10 @@ local servers = {
 	--
 	-- But for many setups, the LSP (`ts_ls`) will work just fine
 	ts_ls = {},
-	prettierd = {},
+	-- prettierd = {},
 	prismals = {},
-	black = {},
-	stylua = {}, -- Used to format Lua code
+	-- black = {},
+	-- stylua = {}, -- Used to format Lua code
 	-- gofumpt = {},
 	emmet_ls = {},
 	tailwindcss = {},
