@@ -29,3 +29,4 @@ vim.o.autoindent = true
 vim.o.autoread = true
 vim.o.autowrite = false
 vim.o.wrap = false
+vim.o.conceallevel = 2

@@ -4,9 +4,6 @@ require("oil").setup({
   -- Id is automatically added at the beginning, and name at the end
   columns = {
     "icon",
-    "permissions",
-    "size",
-    "mtime",
   },
   view_options = {
     show_hidden = true,
