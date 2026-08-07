@@ -1,27 +1,29 @@
 vim.pack.add({
-  {
-    src = "https://github.com/rose-pine/neovim",
-    name = "rose-pine",
-  },
-})
-require("rose-pine").setup({
-  variant = "auto", -- auto, main, moon, or dawn
-  dark_variant = "main", -- main, moon, or dawn
-  dim_inactive_windows = false,
-  extend_background_behind_borders = true,
-
-  enable = {
-    terminal = true,
-    legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-    migrations = true, -- Handle deprecated options automatically
-  },
-
-  styles = {
-    bold = true,
-    italic = false,
-    transparency = true,
-  },
-
+	"https://github.com/ellisonleao/gruvbox.nvim",
 })
 
-vim.cmd("colorscheme rose-pine")
+-- Default options:
+require("gruvbox").setup({
+	terminal_colors = true, -- add neovim terminal colors
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = {
+		strings = false,
+		emphasis = false,
+		comments = true,
+		operators = false,
+		folds = false,
+	},
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "", -- can be "hard", "soft" or empty string
+	palette_overrides = {},
+	overrides = {},
+	dim_inactive = false,
+	transparent_mode = false,
+})
+vim.cmd.colorscheme("gruvbox")
