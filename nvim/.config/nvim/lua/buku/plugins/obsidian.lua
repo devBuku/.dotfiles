@@ -1,39 +1,36 @@
-vim.pack.add {
-  {
-    src = "https://github.com/obsidian-nvim/obsidian.nvim",
-    version = vim.version.range "*",
-  },
-}
+vim.pack.add({
+	{
+		src = "https://github.com/obsidian-nvim/obsidian.nvim",
+		version = vim.version.range("*"),
+	},
+})
 
 require("obsidian").setup({
-  legacy_commands = false,
+	legacy_commands = false,
 
-  frontmatter = {
-    enabled = false
-  },
+	frontmatter = {
+		enabled = false,
+	},
 
-  workspaces = {
-    {
-      name = "personal",
-      path = "~/Projects/personal/Notes",
-    },
-  },
+	note_frontmatter_func = function(note)
+		return { publish = false }
+	end,
 
-  -- New notes go here
-  notes_subdir = "inbox",
+	workspaces = {
+		{
+			name = "Notes",
+			path = "~/Projects/website/Notes",
+		},
+	},
 
-  -- Create new notes in notes_subdir
-  new_notes_location = "notes_subdir",
-  note_id_func = function(title)
-    if title then
-      return title
-        :gsub(" ", "-")
-        :gsub("[^A-Za-z0-9-]", "")
-        :lower()
-    end
-
-    return tostring(os.time())
-  end
+	notes_subdir = "inbox",
+	new_notes_location = "notes_subdir",
+	note_id_func = function(title)
+		if title then
+			return title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+		end
+		return tostring(os.time())
+	end,
 })
 
 local map = vim.keymap.set
