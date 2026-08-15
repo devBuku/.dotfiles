@@ -1,29 +1,36 @@
 vim.pack.add({
-	"https://github.com/ellisonleao/gruvbox.nvim",
+	"https://github.com/mofiqul/vscode.nvim",
 })
 
--- Default options:
-require("gruvbox").setup({
-	terminal_colors = true, -- add neovim terminal colors
-	undercurl = true,
-	underline = true,
-	bold = true,
-	italic = {
-		strings = false,
-		emphasis = false,
-		comments = true,
-		operators = false,
-		folds = false,
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
+	-- Alternatively set style in setup
+	-- style = 'light'
+
+	-- Enable transparent background
+	transparent = true,
+
+	-- Enable italic comment
+	italic_comments = false,
+
+	-- Enable italic inlay type hints
+	italic_inlayhints = false,
+
+	-- Underline `@markup.link.*` variants
+	underline_links = true,
+
+	-- Disable nvim-tree background color
+	disable_nvimtree_bg = true,
+
+	-- Apply theme colors to terminal
+	terminal_colors = true,
+
+	-- Override highlight groups (see ./lua/vscode/theme.lua)
+	group_overrides = {
+		-- this supports the same val table as vim.api.nvim_set_hl
+		-- use colors from this colorscheme by requiring vscode.colors!
+		Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
 	},
-	strikethrough = true,
-	invert_selection = false,
-	invert_signs = false,
-	invert_tabline = false,
-	inverse = true, -- invert background for search, diffs, statuslines and errors
-	contrast = "", -- can be "hard", "soft" or empty string
-	palette_overrides = {},
-	overrides = {},
-	dim_inactive = false,
-	transparent_mode = true,
 })
-vim.cmd.colorscheme("gruvbox")
+
+vim.cmd.colorscheme("vscode")

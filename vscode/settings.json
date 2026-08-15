@@ -1,0 +1,115 @@
+{
+  "workbench.colorTheme": "Dark+",
+  "workbench.startupEditor": "none",
+  "keyboard.dispatch": "keyCode",
+  "window.titleBarStyle": "native",
+  "window.menuBarVisibility": "toggle",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.foldfix": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"],
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"],
+    },
+    {
+      "before": ["g", "r", "n"],
+      "commands": ["editor.action.rename"],
+    },
+    {
+      "before": ["g", "r", "r"],
+      "commands": ["editor.action.goToReferences"],
+    },
+    {
+      "before": ["g", "r", "d"],
+      "commands": ["editor.action.revealDefinition"],
+    },
+    {
+      "before": ["g", "r", "D"],
+      "commands": ["editor.action.revealDeclaration"],
+    },
+    {
+      "before": ["g", "r", "a"],
+      "commands": ["editor.action.quickFix"],
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"],
+    },
+    {
+      "before": ["ESC"],
+      "commands": [":nohl"],
+    },
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprev"],
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"],
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"],
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"],
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-j>": false,
+    "<C-b>": false,
+    "<C-n>": false,
+    "<C-h>": false,
+    "<C-k>": false,
+    "<C-t>": false,
+  },
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+  },
+  "editor.wordWrap": "on",
+  "workbench.experimental.modernUI": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+  },
+  "editor.lineNumbers": "relative",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.fontFamily": "'FiraCode Nerd Font Mono','AdwaitaMono Nerd Font','Droid Sans Mono', monospace",
+  "editor.fontSize": 12,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.renderWhitespace": "all",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.compact": true,
+}

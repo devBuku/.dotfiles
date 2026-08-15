@@ -30,4 +30,4 @@ vim.o.autoread = true
 vim.o.autowrite = false
 vim.o.wrap = false
 vim.o.conceallevel = 2
-vim.o.background = 'light'
+vim.o.background = 'dark'
