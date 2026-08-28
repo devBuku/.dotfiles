@@ -58,4 +58,45 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen",
   },
+  // Create terminal
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus",
+  },
+
+  // Split terminal
+  {
+    "key": "alt+shift+n",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus",
+  },
+
+  // Switch terminal panes
+  {
+    "key": "alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus",
+  },
+
+  // Switch terminal instances
+  {
+    "key": "alt+[",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
 ]
