@@ -77,9 +77,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("v", "<","<gv")
-vim.keymap.set("v", ">",">gv")
-
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 -- vim.keymap.set("n", "<leader>so", ":split<CR>", { desc = "Split window horizontally" })
