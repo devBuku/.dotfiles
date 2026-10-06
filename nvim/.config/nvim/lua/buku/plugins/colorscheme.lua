@@ -3,4 +3,4 @@ vim.pack.add({
 })
 
 require("gruvbox").setup()
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("vim")
