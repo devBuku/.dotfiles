@@ -1,0 +1,19 @@
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
+
+# Add user's bin directories to PATH
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/.config/emacs/bin" ]; then
+    PATH="$HOME/.config/emacs/bin:$PATH"
+fi
+
+export PATH
+
+alias vi='nvim'
