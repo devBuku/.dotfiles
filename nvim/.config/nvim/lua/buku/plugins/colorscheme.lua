@@ -1,6 +1,8 @@
 vim.pack.add({
-  "https://github.com/ellisonleao/gruvbox.nvim"
+	"https://github.com/ellisonleao/gruvbox.nvim",
 })
 
-require("gruvbox").setup()
-vim.cmd.colorscheme("vim")
+require("gruvbox").setup({
+	transparent_mode = true,
+})
+vim.cmd.colorscheme("gruvbox")
