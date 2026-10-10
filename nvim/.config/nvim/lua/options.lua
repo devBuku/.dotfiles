@@ -1,22 +1,24 @@
 vim.loader.enable()
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 vim.o.showmode = true
-vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
 vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
@@ -29,4 +31,4 @@ vim.o.autoindent = true
 vim.o.autoread = true
 vim.o.autowrite = false
 vim.o.wrap = false
-vim.o.background = 'dark'
+vim.o.background = "dark"

@@ -1,8 +1,10 @@
-vim.pack.add({
-	"https://github.com/ellisonleao/gruvbox.nvim",
-})
-
-require("gruvbox").setup({
-	transparent_mode = true,
-})
-vim.cmd.colorscheme("gruvbox")
+-- -- Using vim.pack
+-- vim.pack.add({
+-- 	"https://github.com/navarasu/onedark.nvim",
+-- })
+-- require("onedark").setup({
+-- 	style = "darker",
+-- 	transparent = true
+-- })
+-- require("onedark").load()
+vim.cmd.colorscheme("vim")
