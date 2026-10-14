@@ -80,6 +80,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+
+vim.keymap.set("n", "<leader>r", function()
+    vim.cmd("write")
+    vim.cmd("!python3 %")
+end, { desc = "Run Python" })
+
 -- vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 -- vim.keymap.set("n", "<leader>so", ":split<CR>", { desc = "Split window horizontally" })
 -- vim: ts=2 sts=2 sw=2 et
