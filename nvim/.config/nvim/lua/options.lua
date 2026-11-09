@@ -31,5 +31,5 @@ vim.o.autoindent = true
 vim.o.autoread = true
 vim.o.autowrite = false
 vim.o.wrap = false
-vim.o.background = "dark"
+vim.o.background = "light"
 vim.o.laststatus = 3

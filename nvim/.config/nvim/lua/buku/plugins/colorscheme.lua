@@ -1,6 +1,8 @@
 vim.pack.add({
-  "https://github.com/phha/zenburn.nvim"
+	{
+		src = "https://github.com/Mofiqul/vscode.nvim",
+	},
 })
+require("vscode").setup({})
 
-require("zenburn").setup()
-vim.cmd.colorscheme("zenburn")
+vim.cmd("colorscheme vscode")
